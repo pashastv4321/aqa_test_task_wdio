@@ -1,6 +1,3 @@
-import { $ } from '@wdio/globals'
-
-
 class OverviewPage {
     get itemTotalPrice () {
         return $('.summary_subtotal_label')
@@ -26,6 +23,10 @@ class OverviewPage {
 
     async finishOverview () {
         await this.btnFinish.click()
+    }
+
+    async clickBackBtn () {
+        await this.btnBackToProducts.click()
     }
 }
 

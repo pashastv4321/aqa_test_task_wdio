@@ -1,6 +1,3 @@
-import { $ } from '@wdio/globals'
-
-
 class CartPage {
 
     get cartItems () {
@@ -35,8 +32,9 @@ class CartPage {
 
     async isCartEmpty() {
         const items = await this.cartItems
-        return items === 0 
+        return items.length === 0 
     }
+
 }
 
 

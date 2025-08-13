@@ -1,5 +1,3 @@
-import { $ } from '@wdio/globals'
-
 class CheckoutPage {
     get inputFirstName () {
         return $('#first-name')
@@ -15,6 +13,22 @@ class CheckoutPage {
 
     get btnContinue () {
         return $('#continue')
+    }
+
+    async fillFirstName (fakeFirstName) {
+        return await this.inputFirstName.setValue(fakeFirstName)
+    }
+
+    async fillLastName (fakeLastName) {
+        return await this.inputLastName.setValue(fakeLastName)
+    } 
+
+    async fillZipCode (fakeZipCode) {
+        return await this.inputZipCode.setValue(fakeZipCode)
+    }
+
+    async clickContinueBtn () {
+        return await this.btnContinue.click()
     }
 
 }

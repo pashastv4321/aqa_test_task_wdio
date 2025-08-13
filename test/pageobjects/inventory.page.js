@@ -1,6 +1,3 @@
-import { $ } from '@wdio/globals'
-
-
 class InventoryPage {
 
     get burgerBtn () {
@@ -37,6 +34,14 @@ class InventoryPage {
 
     get menuItems () {
         return $$('.bm-item')
+    }
+
+    async clickBurgerBtn () {
+        return await this.burgerBtn.click()
+    }
+
+    async clickLogout () {
+        return await this.btnLogout.click()
     }
 
     async logout () {
